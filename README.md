@@ -1,38 +1,38 @@
-# 🏥 Sistema de Fila de Atendimento para Laboratório de Coleta de Sangue
+#  Sistema de Fila de Atendimento para Laboratório de Coleta de Sangue
 
 Este projeto implementa um sistema de fila para o atendimento de pacientes em um laboratório de coleta de sangue, utilizando a linguagem **Java** e os conceitos de **Pilha e Fila** abordados na disciplina de **Estrutura de Dados**.
 
 ---
 
-## 📜 **Regras do Atendimento**
-1️⃣ **Ordem de Atendimento:**
+##  **Regras do Atendimento**
+1️ **Ordem de Atendimento:**
    - A cada **3 atendimentos** de pacientes **prioritários**, um paciente **comum** deve ser chamado.  
    - Se não houver pacientes **prioritários**, o atendimento será **100% FIFO (Primeiro a entrar, primeiro a sair).**  
    
-2️⃣ **Ordem dentro das filas:**
+2️ **Ordem dentro das filas:**
    - Pacientes **prioritários** seguem a ordem de chegada.  
    - Pacientes **comuns** também seguem a ordem de chegada.  
    - **Nenhuma reclassificação de prioridade** é feita.
 
 ---
 
-## 🔧 **Tecnologias Utilizadas**
+##  **Tecnologias Utilizadas**
 - **Java** (Sem uso de `ArrayList`, `Stack` ou `Queue` da API do Java).
 - **Estruturas de Dados:** Implementação manual de **Fila** com **Lista Encadeada**.
 
 ---
 
 ## 💡 **Funcionalidades**
-✅ **Solicitar nova senha** (prioritária ou comum).  
-✅ **Excluir uma senha** da fila (sem precisar atender).  
-✅ **Listar todas as senhas na fila** (prioritárias e comuns).  
-✅ **Visualizar quem será o próximo a ser atendido**.  
-✅ **Chamar o próximo paciente** de acordo com as regras de prioridade.  
+ **Solicitar nova senha** (prioritária ou comum).  
+ **Excluir uma senha** da fila (sem precisar atender).  
+ **Listar todas as senhas na fila** (prioritárias e comuns).  
+ **Visualizar quem será o próximo a ser atendido**.  
+ **Chamar o próximo paciente** de acordo com as regras de prioridade.  
 
 ---
 
-## 🏗️ **Como foi Resolvido**
-### 🏛 **Estrutura do Código**
+##  **Como foi Resolvido**
+###  **Estrutura do Código**
 1. **Implementamos uma Fila baseada em Lista Encadeada**, sem utilizar estruturas prontas do Java.  
 2. **Criamos a Classe `Fila`**, que possui métodos para:
    - `enfileirar()` → Adicionar paciente na fila.
@@ -49,8 +49,8 @@ Este projeto implementa um sistema de fila para o atendimento de pacientes em um
 
 ---
 
-## 🏗️ **Código-Fonte**
-### 📌 **Classe `Fila.java`**
+##  **Código-Fonte**
+###  **Classe `Fila.java`**
 ```java
 class No {
     String nome;
