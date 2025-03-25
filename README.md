@@ -22,7 +22,7 @@ Este projeto implementa um sistema de fila para o atendimento de pacientes em um
 
 ---
 
-## 💡 **Funcionalidades**
+##  **Funcionalidades**
  **Solicitar nova senha** (prioritária ou comum).  
  **Excluir uma senha** da fila (sem precisar atender).  
  **Listar todas as senhas na fila** (prioritárias e comuns).  
