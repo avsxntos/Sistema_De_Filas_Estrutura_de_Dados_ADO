@@ -1,6 +1,6 @@
-#  Sistema de Fila de Atendimento para Laboratório de Coleta de Sangue
+#  Sistema de Fila de Atendimento 
 
-Este projeto implementa um sistema de fila para o atendimento de pacientes em um laboratório de coleta de sangue, utilizando a linguagem **Java** e os conceitos de **Pilha e Fila** abordados na disciplina de **Estrutura de Dados**.
+Este projeto implementa um sistema de fila para o atendimento, utilizando a linguagem **Java** e os conceitos de **Pilha e Fila** abordados na disciplina de **Estrutura de Dados**.
 
 ---
 
@@ -49,103 +49,7 @@ Este projeto implementa um sistema de fila para o atendimento de pacientes em um
 
 ---
 
-##  **Código-Fonte**
-###  **Classe `Fila.java`**
-```java
-class No {
-    String nome;
-    No proximo;
+##  **Autor**
+Desenvolvido por **[avsxntos](https://github.com/avsxntos)** 🏅  
+Se gostou do projeto, **deixe uma estrela ⭐ no repositório!**  
 
-    public No(String nome) {
-        this.nome = nome;
-        this.proximo = null;
-    }
-}
-
-class Fila {
-    private No inicio, fim;
-    private int tamanho;
-
-    public Fila() {
-        this.inicio = this.fim = null;
-        this.tamanho = 0;
-    }
-
-    public boolean estaVazia() {
-        return inicio == null;
-    }
-
-    public void enfileirar(String nome) {
-        No novo = new No(nome);
-        if (estaVazia()) {
-            inicio = fim = novo;
-        } else {
-            fim.proximo = novo;
-            fim = novo;
-        }
-        tamanho++;
-    }
-
-    public String desenfileirar() {
-        if (estaVazia()) {
-            return null;
-        }
-        String nome = inicio.nome;
-        inicio = inicio.proximo;
-        if (inicio == null) {
-            fim = null;
-        }
-        tamanho--;
-        return nome;
-    }
-
-    public boolean remover(String nome) {
-        if (estaVazia()) {
-            return false;
-        }
-        
-        if (inicio.nome.equals(nome)) {
-            desenfileirar();
-            return true;
-        }
-
-        No atual = inicio;
-        No anterior = null;
-
-        while (atual != null && !atual.nome.equals(nome)) {
-            anterior = atual;
-            atual = atual.proximo;
-        }
-
-        if (atual != null) {
-            anterior.proximo = atual.proximo;
-            if (atual == fim) {
-                fim = anterior;
-            }
-            tamanho--;
-            return true;
-        }
-
-        return false;
-    }
-
-    public String espiar() {
-        return estaVazia() ? null : inicio.nome;
-    }
-
-    public void listarTodos() {
-        if (estaVazia()) {
-            System.out.println("Fila vazia!");
-            return;
-        }
-        No atual = inicio;
-        System.out.println("Fila de atendimento:");
-        while (atual != null) {
-            System.out.println("- " + atual.nome);
-            atual = atual.proximo;
-        }
-    }
-}
-
-# Autor
-## Desenvolvido por *avsxntos* 🏅
