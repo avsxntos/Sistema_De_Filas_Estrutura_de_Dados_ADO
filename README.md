@@ -146,3 +146,6 @@ class Fila {
         }
     }
 }
+
+# Autor
+## Desenvolvido por *avsxntos* 🏅
